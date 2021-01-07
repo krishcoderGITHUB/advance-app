@@ -294,7 +294,7 @@ $(function() {
     
     $("#contactForm").submit(function() { const queryString = window.location.search;
  const urlParams = new URLSearchParams(queryString);
- const l = urlParams.get('name')
+ const l = urlParams.get('name');
  document.getElementsById("name").setAttribute("value",l);
 // Show alert
  document.querySelector('.alert').style.display = 'block';
