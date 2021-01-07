@@ -196,7 +196,7 @@ input[type="submit"] { margin: 30px 0px 0px; font-size: 20px; }
 
  <center> <h3>Add Your Comment</h3></center>
     <div class="alert">Comment Added👍🏼😉!</div>
-  <form id="contactForm">
+  <form id="contactForm" onsubmit="submitform()">
   <p>
   <label>Name</label>
    <input type="text" name="name" id="name" value="No name" disabled required></center>
@@ -219,7 +219,8 @@ input[type="submit"] { margin: 30px 0px 0px; font-size: 20px; }
   <button type="submit">Submit</button>
   </p>
   
-  </form>
+  </form><script>myFunction(){document.getElementById("name").setAttribute("value",l);
+}</script>
   </div>
   </div>
   
