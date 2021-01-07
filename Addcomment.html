@@ -293,8 +293,8 @@ $(function() {
     
     
     $("#contactForm").submit(function() { 
-var teeet = document.getElementById("ee").textContent;
- document.getElementsById("name").setAttribute("value",teeet);
+//var teeet = document.getElementById("ee").textContent;
+ //document.getElementsById("name").setAttribute("value",teeet);
 // Show alert
  document.querySelector('.alert').style.display = 'block';
  
@@ -313,7 +313,7 @@ var teeet = document.getElementById("ee").textContent;
       });
 
 
-      $("input[type=text], textarea").val("");
+      $("textarea").val("");
       return false;
     });
 });
