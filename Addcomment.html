@@ -205,7 +205,7 @@ input[type="submit"] { margin: 30px 0px 0px; font-size: 20px; }
  const urlParams = new URLSearchParams(queryString);
  const l = urlParams.get('name');
  document.getElementById("name").setAttribute("value",l);
-ee.innerText = l;
+document.getElementById("ee").innerHTML = l ;
  </script>
 <!--  <p>
   <label>Email Address</label>
