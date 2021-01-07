@@ -196,7 +196,7 @@ input[type="submit"] { margin: 30px 0px 0px; font-size: 20px; }
 
  <center> <h3>Add Your Comment</h3></center>
     <div class="alert">Comment Added👍🏼😉!</div>
-  <form id="contactForm" onsubmit="submitform()">
+  <form id="contactForm">
   <p>
   <label>Name</label>
    <input type="text" name="name" id="name" value="No name" disabled required></center>
@@ -219,10 +219,7 @@ input[type="submit"] { margin: 30px 0px 0px; font-size: 20px; }
   <button type="submit">Submit</button>
   </p>
   
-  </form><script>const queryString = window.location.search;
- const urlParams = new URLSearchParams(queryString);
- const l = urlParams.get('name')submitform(){document.getElementById("name").setAttribute("value",l);
-}</script>
+  </form>
   </div>
   </div>
   
@@ -295,7 +292,10 @@ $(function() {
 //<img src="http://www.gravatar.com/avatar/' + escapeHtml(newPost.md5Email) + '?s=100&d=retro"/>
     
     
-    $("#contactForm").submit(function() {
+    $("#contactForm").submit(function() { const queryString = window.location.search;
+ const urlParams = new URLSearchParams(queryString);
+ const l = urlParams.get('name')
+ document.getElementsById("name").setAttribute("value",l);
 // Show alert
  document.querySelector('.alert').style.display = 'block';
  
