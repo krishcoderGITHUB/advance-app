@@ -219,7 +219,9 @@ input[type="submit"] { margin: 30px 0px 0px; font-size: 20px; }
   <button type="submit">Submit</button>
   </p>
   
-  </form><script>submitform(){document.getElementById("name").setAttribute("value",l);
+  </form><script>const queryString = window.location.search;
+ const urlParams = new URLSearchParams(queryString);
+ const l = urlParams.get('name')submitform(){document.getElementById("name").setAttribute("value",l);
 }</script>
   </div>
   </div>
