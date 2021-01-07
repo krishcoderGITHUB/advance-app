@@ -199,8 +199,14 @@ input[type="submit"] { margin: 30px 0px 0px; font-size: 20px; }
   <form id="contactForm">
   <p>
   <label>Name</label>
-  <input type="text" name="name" id="name" required disabled>
-  </p>
+   <input type="text" name="name" id="name" value="No name" disabled required></center>
+  </p><script type="text/javascript">
+ const queryString = window.location.search;
+ const urlParams = new URLSearchParams(queryString);
+ const l = urlParams.get('name')
+ document.getElementsById("name").setAttribute("value",l);
+
+ </script>
 <!--  <p>
   <label>Email Address</label>
   <input type="email" name="email" id="email" required>
