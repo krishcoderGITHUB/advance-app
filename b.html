@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.1.2/css/material-design-iconic-font.min.css'>
+  <title>CodePen - WhatsApp 2017 Chat Style</title>
+  <link rel="stylesheet" href="./style.css">
+<style type="text/css">
+.conversation-compose {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  overflow: hidden;
+  height: 40px;
+  width: 100vw;
+  z-index: 2;
+}
+
+.conversation-compose div,
+.conversation-compose input {
+  background: #fff;
+  height: 100%;
+}
+
+.conversation-compose .emoji {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border-radius: 50% 0 0 50%;
+  flex: 0 0 auto;
+  margin-left: 8px;
+  width: 38px;
+  height: 38px;
+}
+
+.conversation-compose .input-msg {
+  border: 0;
+  flex: 1 1 auto;
+  font-size: 14px;
+  margin: 0;
+  outline: none;
+  min-width: 50px;
+  height: 36px;
+}
+
+.conversation-compose .photo {
+  flex: 0 0 auto;
+  border-radius: 0 30px 30px 0;
+  text-align: center;
+  width: auto;
+  display: flex;
+  padding-right: 6px;
+  height: 38px;
+}
+
+.conversation-compose .photo img {
+  display: block;
+  color: #7d8488;
+  font-size: 24px;
+  transform: translate(-50%, -50%);
+  position: relative;
+  top: 50%;
+  margin-left: 10px;
+}
+
+
+.conversation-compose .send {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  flex: 0 0 auto;
+  margin-right: 8px;
+  padding: 0;
+  position: relative;
+  outline: none;
+  margin-left: .5rem;
+}
+
+.conversation-compose .send .circle {
+  background: #008a7c;
+  border-radius: 50%;
+  color: #fff;
+  position: relative;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.conversation-compose .send .circle i {
+  font-size: 24px;
+  margin-left: 1px;
+}
+body {
+  /*I ripped this image from the WhatsApp apk*/
+  /*This is WhatsApp's official BK color*/
+  background: #ECE5DD;
+  font-family: "Helvetica Neue", Helvetica;
+margin-bottom:0px;
+
+}
+
+.container {
+  width: 75vw;
+  margin: 0 0;
+height: calc(100vh - 69px);
+// background-color:red;
+
+}
+
+.msg {
+  width: 100vw;
+  height: auto;
+  display: block;
+  overflow: hidden;
+
+}
+.msg .bubble {
+  float: left;
+  max-width: 75vw;
+  width: auto;
+  height: auto;
+  display: block;
+  background: #ebebeb;
+  border-radius: 5px;
+  position: relative;
+  margin: 10px 10px 3px;
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2);
+
+}
+.msg .bubble.alt {
+  margin: 5px 10px 3px 5px;
+  background: #DCF8C6;
+  float: right;
+}
+
+.msg .bubble .txt {
+  padding: 4px 0 4px 0;
+  width: 100%;
+}
+.msg .bubble .txt .name {
+  font-weight: 600;
+  font-size: 14px;
+  display: inline-table;
+  padding: 0 0 0 10px;
+  margin: 0 0 2px 0;
+  color: #3498db;
+}
+.msg .bubble .txt .name span {
+  font-weight: normal;
+  color: #b3b3b3;
+  overflow: hidden;
+}
+.msg .bubble .txt .name.alt {
+  color: #2ecc51;
+}
+.msg .bubble .txt .message {
+  font-size: 14px;
+  font-weight: 500;
+  padding: 0 10px 0 10px;
+  margin: auto;
+  color: #2b2b2b;
+  display: table;
+}
+.msg .bubble .txt .timestamp {
+  font-size: 11px;
+  margin: auto;
+  margin-top:3px;
+  padding: 0 15px 0 0;
+  display: table;
+  float: right;
+  position: relative;
+  text-transform: uppercase;
+  color: #999;
+}
+.msg .bubble .bubble-arrow {
+  position: absolute;
+  float: left;
+  left: -11px;
+  top: 0px;
+}
+.msg .bubble .bubble-arrow.alt {
+  bottom: 20px;
+  left: auto;
+  right: 4px;
+  float: right;
+}
+.msg .bubble .bubble-arrow:after {
+  content: "";
+  position: absolute;
+  border-top: 15px solid #ebebeb;
+  border-left: 15px solid transparent;
+  border-radius: 4px 0 0 0px;
+  width: 0;
+  height: 0;
+}
+.msg .bubble .bubble-arrow.alt:after {
+  border-top: 15px solid #DCF8C6;
+  transform: scaleX(-1);
+}
+
+
+
+
+
+
+
+
+
+
+
+  .container {
+    width: 100vw;
+  }
+.screen-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+  .timestamp {
+    display: none;
+    color: red;
+  }
+</style>
+</head>
+<body><div class="screen-container">
+<!-- partial:index.partial.html -->
+<div class="container">
+
+
+<div class="msg">
+  <div class="bubble">
+    <div class="txt">
+      <span class="name">Mike</span>
+
+      <span class="message">
+        Can you believe this amazing chat bubbles? It's all CSS. 
+      </span> 
+            <span class="timestamp">10:22 pm</span>
+    </div>
+    <div class="bubble-arrow"></div>
+  </div>
+</div>  
+
+<div class="msg">
+  <div class="bubble alt">
+    <div class="txt">
+    <span class="name alt"> My Name
+      </span>
+
+      <p class="message">It's nuts, dude. Nuts</p>
+            <span class="timestamp">10:22 pm</span>
+    </div>
+    <div class="bubble-arrow alt"></div>
+  </div>
+</div> 
+</div> 
+<form class="conversation-compose">
+  <div class="emoji">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" id="smiley" x="3147" y="3209"><path fill-rule="evenodd" clip-rule="evenodd" d="M9.153 11.603c.795 0 1.44-.88 1.44-1.962s-.645-1.96-1.44-1.96c-.795 0-1.44.88-1.44 1.96s.645 1.965 1.44 1.965zM5.95 12.965c-.027-.307-.132 5.218 6.062 5.55 6.066-.25 6.066-5.55 6.066-5.55-6.078 1.416-12.13 0-12.13 0zm11.362 1.108s-.67 1.96-5.05 1.96c-3.506 0-5.39-1.165-5.608-1.96 0 0 5.912 1.055 10.658 0zM11.804 1.01C5.61 1.01.978 6.034.978 12.23s4.826 10.76 11.02 10.76S23.02 18.424 23.02 12.23c0-6.197-5.02-11.22-11.216-11.22zM12 21.355c-5.273 0-9.38-3.886-9.38-9.16 0-5.272 3.94-9.547 9.214-9.547a9.548 9.548 0 0 1 9.548 9.548c0 5.272-4.11 9.16-9.382 9.16zm3.108-9.75c.795 0 1.44-.88 1.44-1.963s-.645-1.96-1.44-1.96c-.795 0-1.44.878-1.44 1.96s.645 1.963 1.44 1.963z" fill="#7d8489"/></svg>
+  </div>
+  <textarea rows="1" class="input-msg" style="max-height:34px;" name="input" placeholder="Type a mes.." autocomplete="off" autofocus></textarea>
+  <div class="photo">
+<!--    <img src="https://i.ibb.co/zNL2yg0/ib-attach.png" alt="" width="25" height="25">
+    <img src="https://i.ibb.co/vHXYtHF/ib-camera.png" alt="" width="25" height="25">-->
+  </div>
+  <button class="send">
+      <div class="circle">
+<img src="https://img.icons8.com/small/344/ffffff/filled-sent.png" height="26px" style="margin-left:2px;">
+      </div>
+    </button>
+</form> 
+</div>
+</body>
+</html>
