@@ -181,7 +181,8 @@ $(".comments").append((newPost.name==nname?`<div class="msg">
     <div class="bubble-arrow"></div>
   </div>
  `));    
-  $('.comments').animate({scrollTop:$('.comments').prop('scrollHeight')}, 100);
+var height = document.querySelector('.screen-container').offsetHeight;
+window.scrollTo(0,height);
    });});
  
  function slugify(text) {
