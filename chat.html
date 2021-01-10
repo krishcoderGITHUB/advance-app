@@ -180,7 +180,9 @@ $(".comments").append((newPost.name==nname?`<div class="msg">
     </div>
     <div class="bubble-arrow"></div>
   </div>
- `));       });});
+ `));    function scrollDown() {
+  $('.comments').animate({scrollTop:$('.comments').prop('scrollHeight')}, 100);
+}   });});
  
  function slugify(text) {
  return text.toString().toLowerCase().trim()
