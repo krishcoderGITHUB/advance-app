@@ -142,8 +142,14 @@ input.addEventListener("keyup", function(event) {
   if (event.keyCode === 13) {
     // Cancel the default action, if needed
     event.preventDefault();
-    // Trigger the button element with a click
-    document.getElementById("submit_btn").click();
+    function validateForm() {
+  var x = document.forms["contactForm"]["message"].value;
+  if (x == "") {
+    alert("Name must be filled out");
+    return false;
+  }else{document.getElementById("submit_btn").click();}
+}// Trigger the button element with a click
+    
   }
 });
     
