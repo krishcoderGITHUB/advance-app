@@ -102,7 +102,7 @@
 <!--    <img src="https://i.ibb.co/zNL2yg0/ib-attach.png" alt="" width="25" height="25">
     <img src="https://i.ibb.co/vHXYtHF/ib-camera.png" alt="" width="25" height="25">-->
   </div>
-  <button class="send" type="submit">
+  <button id="submit_btn" class="send" type="submit">
       <div class="circle">
 <img src="https://img.icons8.com/small/344/ffffff/filled-sent.png" height="26px" style="margin-left:2px;">
       </div>
@@ -134,7 +134,18 @@ $(function() {
 //To add comments to reviewcomments child in firebase
     b = ref.child(path);
 //<img src="http://www.gravatar.com/avatar/' + escapeHtml(newPost.md5Email) + '?s=100&d=retro"/>
-    
+    var input = document.getElementById("message");
+
+// Execute a function when the user releases a key on the keyboard
+input.addEventListener("keyup", function(event) {
+  // Number 13 is the "Enter" key on the keyboard
+  if (event.keyCode === 13) {
+    // Cancel the default action, if needed
+    event.preventDefault();
+    // Trigger the button element with a click
+    document.getElementById("submit_btn").click();
+  }
+});
     
     $("#contactForm").submit(function() { 
 //var teeet = document.getElementById("ee").textContent;
