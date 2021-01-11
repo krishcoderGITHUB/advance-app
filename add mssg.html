@@ -133,26 +133,7 @@ $(function() {
     
 //To add comments to reviewcomments child in firebase
     b = ref.child(path);
-//<img src="http://www.gravatar.com/avatar/' + escapeHtml(newPost.md5Email) + '?s=100&d=retro"/>
-    var input = document.getElementById("message");
-
-// Execute a function when the user releases a key on the keyboard
-input.addEventListener("keyup", function(event) {
-  // Number 13 is the "Enter" key on the keyboard
-  if (event.keyCode === 13) {
-    // Cancel the default action, if needed
-    event.preventDefault();
-    function validateForm() {
-  var x = document.forms["contactForm"]["message"].value;
-  if (x == "") {
-    alert("Name must be filled out");
-    return false;
-  }else{document.getElementById("submit_btn").click();}
-}// Trigger the button element with a click
-    
-  }
-});
-    
+//<img src="http://www.gravatar.com/avatar/' + escapeHtml(newPost.md5Email) + '?s=100&d=retro"/>  
     $("#contactForm").submit(function() { 
 //var teeet = document.getElementById("ee").textContent;
  //document.getElementsById("name").setAttribute("value",teeet);
