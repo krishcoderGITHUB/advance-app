@@ -47,15 +47,18 @@ margin:0;padding:0px;
 
 .msg .bubble .txt {
   padding: 4px 0 4px 0;
-  width: 100%;
+word-wrap: break-word;
 }
 .msg .bubble .txt .name {
   font-weight: 600;
   font-size: 14px;
-  display: inline-table;
+  display: block;
   padding: 0 0 0 10px;
   margin: 0 0 2px 0;
   color: #3498db;
+   
+   max-width:80%; height:16px;white-space: nowrap;
+  overflow: hidden;text-overflow: ellipsis;
 }
 .msg .bubble .txt .name span {
   font-weight: normal;
