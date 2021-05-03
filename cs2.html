@@ -1,0 +1,47 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title></title>
+<style type="text/css">
+.list {
+width:108vw;
+  margin: 0 0;
+height: calc(100vh - 100px);
+transform:translateX(-40px);
+  background: #ECE5DD;
+ border-color:#ECE5DD;
+}
+
+body {
+
+
+  background: #ECE5DD;
+  font-family: "Helvetica Neue", Helvetica;
+margin:0;padding:0px;
+
+}.screen-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+</style>
+</head>
+<body><div class="screen-container">
+<iframe id="myAnchor1" class="list"></iframe>
+<iframe id="myAnchor2" style="background:#ECE5DD; border-color:#ECE5DD;" width="100%" height="60px"></iframe>
+
+ 
+ </div>
+<script>
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+const nname = urlParams.get('name');
+const ttitle = urlParams.get('title');
+document.getElementById("myAnchor1").setAttribute("src", "https://krishcodergithub.github.io/advance-app/chatt3.html?title=" + ttitle);
+document.getElementById("myAnchor2").setAttribute("src", "https://krishcodergithub.github.io/advance-app/add mssg3.html?title=" + ttitle +"&name=" + nname);
+
+</SCRIPT>
+</body>
+</html>
