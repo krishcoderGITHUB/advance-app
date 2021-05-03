@@ -170,7 +170,8 @@ $(".comments").append((newPost.name==nname?`<div class="msg">
       </span>
 
       <p class="message">`+escapeHtml(newPost.message)+`</p>
-              </div>
+           <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+   </div>
     <div class="bubble-arrow alt"></div>
   </div>
 </div> 
@@ -182,7 +183,7 @@ $(".comments").append((newPost.name==nname?`<div class="msg">
       <span class="message">
    `+escapeHtml(newPost.message)+`
       </span> 
-               </div>
+              <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> </div>
     <div class="bubble-arrow"></div>
   </div>
  `));    
